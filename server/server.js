@@ -20,8 +20,8 @@ app.get('/:id', (req, res) => {
 
 // Image Routes
 app.get('/images/:id', async (req, res) => {
-  // await axios.get(`http://100.24.35.141:4012/images/${req.params.id}`)
-  await axios.get(`http://localhost:4012/images/${req.params.id}`)
+  // await axios.get(`http://localhost:4012/images/${req.params.id}`)
+  await axios.get(`http://3.237.22.195:4012/images/${req.params.id}`)
     .then(response => {
       res.send(response.data);
     })

@@ -13,7 +13,11 @@
     "react-dev": "webpack serve --mode development --open --hot",
     "server-dev": "nodemon ./server/server",
     "docker-build": "docker build -t anthonysim/proxy:latest .",
-    "docker-run": "docker run --restart=always -dp 3000:3000 anthonysim/proxy"
+    "docker-run": "docker run --restart=always -dp 3000:3000 anthonysim/proxy",
+    "start:pm2": "pm2 start ./server/server.js",
+    "reload:pm2": "pm2 reload ./server/server.js",
+    "stop:pm2": "pm2 stop ./server/server.js",
+    "delete:pm2": "pm2 delete ./server/server.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -21,6 +25,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.15",
+    "pm2": "^5.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
@@ -43,6 +48,6 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^1.16.5"
   }
 }
